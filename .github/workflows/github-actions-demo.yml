@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
     name: Build my project ✨
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       # Checkout (without LFS)
       - name: Checkout repository
@@ -42,7 +42,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: iOS
 
       # Output
       - uses: actions/upload-artifact@v2
