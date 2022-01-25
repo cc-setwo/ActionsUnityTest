@@ -148,6 +148,11 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             if (buildTarget == BuildTarget.Android)
             {
                 EditorUserBuildSettings.exportAsGoogleAndroidProject = true;
+
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
             }
 
             BuildSummary buildSummary = BuildPipeline.BuildPlayer(buildPlayerOptions).summary;
