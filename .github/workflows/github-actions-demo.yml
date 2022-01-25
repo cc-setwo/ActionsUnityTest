@@ -42,7 +42,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: Android
+          buildMethod: UnityBuilderAction.BuildScript.Build
 
       # Output
       - uses: actions/upload-artifact@v2
