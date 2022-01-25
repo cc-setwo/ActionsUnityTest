@@ -26,8 +26,7 @@ namespace UnityBuilderAction
             PlayerSettings.Android.bundleVersionCode = int.Parse(options["androidVersionCode"]);
 
             // Apply build target
-            //var buildTarget = (BuildTarget) Enum.Parse(typeof(BuildTarget), options["buildTarget"]);
-            var buildTarget = BuildTarget.Android;
+            var buildTarget = (BuildTarget) Enum.Parse(typeof(BuildTarget), options["buildTarget"]);
             switch (buildTarget)
             {
                 case BuildTarget.Android:
@@ -127,7 +126,15 @@ namespace UnityBuilderAction
 
                 // Assign
                 Console.WriteLine($"Found flag \"{flag}\" with value {displayValue}.");
-                providedArguments.Add(flag, value);
+
+                if (providedArguments.ContainsKey(flag))
+                {
+                    providedArguments[flag] = value;
+                }
+                else
+                {
+                    providedArguments.Add(flag, value);
+                }
             }
         }
 
