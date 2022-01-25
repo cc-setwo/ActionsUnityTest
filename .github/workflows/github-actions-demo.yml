@@ -43,7 +43,6 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           buildMethod: UnityBuilderAction.BuildScript.Build
-          customParameters: -buildTarget Android
 
       # Output
       - uses: actions/upload-artifact@v2
