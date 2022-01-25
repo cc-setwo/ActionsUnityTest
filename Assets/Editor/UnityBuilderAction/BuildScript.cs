@@ -26,7 +26,8 @@ namespace UnityBuilderAction
             PlayerSettings.Android.bundleVersionCode = int.Parse(options["androidVersionCode"]);
 
             // Apply build target
-            var buildTarget = (BuildTarget) Enum.Parse(typeof(BuildTarget), options["buildTarget"]);
+            //var buildTarget = (BuildTarget) Enum.Parse(typeof(BuildTarget), options["buildTarget"]);
+            var buildTarget = BuildTarget.Android;
             switch (buildTarget)
             {
                 case BuildTarget.Android:
