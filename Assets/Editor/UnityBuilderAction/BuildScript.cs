@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
+using UnityEngine;
 
 namespace UnityBuilderAction
 {
@@ -152,7 +153,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
           BuildOptions.AllowDebugging : BuildOptions.None
             };
 
-            /*if (buildTarget == BuildTarget.Android)
+            if (buildTarget == BuildTarget.Android)
             {
                 EditorUserBuildSettings.exportAsGoogleAndroidProject = true;
 
@@ -160,9 +161,17 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 {
                     Directory.CreateDirectory(filePath);
                 }
-            }*/
+            }
 
             BuildSummary buildSummary = BuildPipeline.BuildPlayer(buildPlayerOptions).summary;
+            
+            
+                
+            Debug.LogWarning(filePath);
+            Debug.LogError(filePath);
+            Debug.Log(filePath);
+            
+            
             ReportSummary(buildSummary);
             ExitWithResult(buildSummary.result);
         }
