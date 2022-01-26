@@ -176,7 +176,9 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 if (Directory.Exists(filePath.Replace("/build/Android/Android.apk", "/build")))
                 {
                     Debug.Log("Deleting build folder: " + filePath.Replace("/build/Android/Android.apk", "/build"));
-                    Directory.Delete(filePath.Replace("/build/Android/Android.apk", "/build"));
+                    Directory.Delete(filePath.Replace("/build/Android/Android.apk", "/build"), true);
+                    DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
+                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/Android/Android.apk", "/build")));
                 }
 
                 Directory.Move(tempDirectoryPath, filePath.Replace("/build/Android/Android.apk", "/build"));
@@ -184,6 +186,25 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
 
             ReportSummary(buildSummary);
             ExitWithResult(buildSummary.result);
+        }
+        
+        private static void DeleteDirectory(string target_dir)
+        {
+            string[] files = Directory.GetFiles(target_dir);
+            string[] dirs = Directory.GetDirectories(target_dir);
+
+            foreach (string file in files)
+            {
+                File.SetAttributes(file, FileAttributes.Normal);
+                File.Delete(file);
+            }
+
+            foreach (string dir in dirs)
+            {
+                DeleteDirectory(dir);
+            }
+
+            Directory.Delete(target_dir, false);
         }
 
         private static void ReportSummary(BuildSummary summary)
