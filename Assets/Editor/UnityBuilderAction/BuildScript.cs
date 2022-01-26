@@ -173,7 +173,9 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
 
             if (buildTarget == BuildTarget.Android)
             {
-                Directory.Move(filePath, filePath.Replace("/Android/Android.apk", ""));
+                Directory.Move(filePath, filePath.Replace("/Android/Android.apk", "/temp"));
+                Directory.Delete(filePath);
+                Directory.Move(filePath.Replace("/Android/Android.apk", "/temp"), filePath.Replace("/Android/Android.apk", ""));
             }
 
             ReportSummary(buildSummary);
