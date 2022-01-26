@@ -164,18 +164,22 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             }
 
             BuildSummary buildSummary = BuildPipeline.BuildPlayer(buildPlayerOptions).summary;
-            
-            
-                
-            Debug.LogWarning(filePath);
-            Debug.LogError(filePath);
-            Debug.Log(filePath);
 
             if (buildTarget == BuildTarget.Android)
             {
-                Directory.Move(filePath, filePath.Replace("/Android/Android.apk", "/temp"));
-                Directory.Delete(filePath);
-                Directory.Move(filePath.Replace("/Android/Android.apk", "/temp"), filePath.Replace("/Android/Android.apk", ""));
+                var tempDirectoryPath = filePath.Replace("/build/Android/Android.apk", "/temp");
+                Debug.Log("Orig Path: " + filePath + " || temp Path: " + tempDirectoryPath);
+                
+                
+                Directory.Move(filePath, tempDirectoryPath);
+
+                if (Directory.Exists(filePath.Replace("/build/Android/Android.apk", "/build")))
+                {
+                    Debug.Log("Deleting build folder");
+                    Directory.Delete(filePath.Replace("/build/Android/Android.apk", "/build"));
+                }
+
+                Directory.Move(tempDirectoryPath, filePath.Replace("/build/Android/Android.apk", "/build"));
             }
 
             ReportSummary(buildSummary);
