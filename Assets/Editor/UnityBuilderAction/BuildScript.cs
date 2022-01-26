@@ -177,10 +177,11 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 {
                     Debug.Log("Deleting build folder: " + filePath.Replace("/build/Android/Android.apk", "/build"));
                     Directory.Delete(filePath.Replace("/build/Android/Android.apk", "/build"), true);
-                    DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
+                    //DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
                     Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/Android/Android.apk", "/build")));
                 }
 
+                Debug.Log("From: " + tempDirectoryPath + " || to: " + filePath.Replace("/build/Android/Android.apk", "/build"));
                 Directory.Move(tempDirectoryPath, filePath.Replace("/build/Android/Android.apk", "/build"));
             }
 
