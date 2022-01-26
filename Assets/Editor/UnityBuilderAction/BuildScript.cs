@@ -152,7 +152,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
           BuildOptions.AllowDebugging : BuildOptions.None
             };
 
-            if (buildTarget == BuildTarget.Android)
+            /*if (buildTarget == BuildTarget.Android)
             {
                 EditorUserBuildSettings.exportAsGoogleAndroidProject = true;
 
@@ -160,7 +160,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 {
                     Directory.CreateDirectory(filePath);
                 }
-            }
+            }*/
 
             BuildSummary buildSummary = BuildPipeline.BuildPlayer(buildPlayerOptions).summary;
             ReportSummary(buildSummary);
