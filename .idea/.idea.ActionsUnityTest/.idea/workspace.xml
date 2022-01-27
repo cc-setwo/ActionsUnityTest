@@ -64,7 +64,8 @@
       <option name="presentableId" value="Default" />
       <updated>1643116579119</updated>
       <workItem from="1643116582850" duration="3985000" />
-      <workItem from="1643208180297" duration="5273000" />
+      <workItem from="1643208180297" duration="5872000" />
+      <workItem from="1643291879510" duration="722000" />
     </task>
     <servers />
   </component>
@@ -155,26 +156,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs</url>
-          <line>55</line>
+          <line>56</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="54">
             <startOffsets>
-              <option value="2472" />
+              <option value="2501" />
             </startOffsets>
             <endOffsets>
-              <option value="2519" />
+              <option value="2548" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs</url>
-          <line>165</line>
+          <line>166</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="154">
             <startOffsets>
-              <option value="6808" />
+              <option value="6837" />
             </startOffsets>
             <endOffsets>
-              <option value="6890" />
+              <option value="6919" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
