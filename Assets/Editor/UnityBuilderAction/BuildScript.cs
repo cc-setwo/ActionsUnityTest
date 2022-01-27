@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
+#if !UNITY_ANDROID
 using UnityEditor.iOS.Xcode;
+#endif
 using UnityEngine;
 
 namespace UnityBuilderAction

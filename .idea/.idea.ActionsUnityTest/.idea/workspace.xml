@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd396d80-363f-4199-96af-cff939dda98b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +63,7 @@
       <updated>1643116579119</updated>
       <workItem from="1643116582850" duration="3985000" />
       <workItem from="1643208180297" duration="5872000" />
-      <workItem from="1643291879510" duration="722000" />
+      <workItem from="1643291879510" duration="1339000" />
     </task>
     <servers />
   </component>
@@ -156,26 +154,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs</url>
-          <line>56</line>
+          <line>58</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="54">
             <startOffsets>
-              <option value="2501" />
+              <option value="2527" />
             </startOffsets>
             <endOffsets>
-              <option value="2548" />
+              <option value="2574" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs</url>
-          <line>166</line>
+          <line>168</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="154">
             <startOffsets>
-              <option value="6837" />
+              <option value="6863" />
             </startOffsets>
             <endOffsets>
-              <option value="6919" />
+              <option value="6945" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
