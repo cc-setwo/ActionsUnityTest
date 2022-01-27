@@ -193,13 +193,16 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             {
                 string projPath = filePath + "/Unity-iPhone.xcodeproj/project.pbxproj";
                 PBXProject proj = new PBXProject();
-                proj.ReadFromString(File.ReadAllText(projPath));
+                string source = File.ReadAllText(projPath);
+                proj.ReadFromString(source);
                 string targetGuid = proj.GetUnityMainTargetGuid();
                 proj.AddBuildProperty(targetGuid, "ENABLE_BITCODE", "false");
                 proj.AddBuildProperty(targetGuid, "OTHER_LDFLAGS", "-Wl,-U,_FlutterUnityPluginOnMessage");
                 Debug.Log("UnityFramework: " + proj.GetUnityFrameworkTargetGuid());
                 Debug.Log("Data: " + proj.FindFileGuidByProjectPath("/Data"));
                 //proj.file
+                Debug.Log(source.Substring(source.IndexOf("/* Data in Resources */") - 26, 50));
+                //proj.AddFileToBuild();
                 proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), proj.FindFileGuidByProjectPath("/Data"));
                 File.WriteAllText(projPath, proj.WriteToString());
             }
