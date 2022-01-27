@@ -220,7 +220,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 //Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Group));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Sdk));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Source));
-                //proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
+                proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), "AA31BF961B55660D0013FB1B");
 
                 //proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
                 File.WriteAllText(projPath, proj.WriteToString());
