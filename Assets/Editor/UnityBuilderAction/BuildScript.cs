@@ -197,7 +197,10 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 string targetGuid = proj.GetUnityMainTargetGuid();
                 proj.AddBuildProperty(targetGuid, "ENABLE_BITCODE", "false");
                 proj.AddBuildProperty(targetGuid, "OTHER_LDFLAGS", "-Wl,-U,_FlutterUnityPluginOnMessage");
-                proj.AddFileToBuild(proj.TargetGuidByName("UnityFramework"), proj.FindFileGuidByProjectPath("/Data"));
+                Debug.Log("UnityFramework: " + proj.GetUnityFrameworkTargetGuid());
+                Debug.Log("Data: " + proj.FindFileGuidByProjectPath("/Data"));
+                //proj.file
+                proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), proj.FindFileGuidByProjectPath("/Data"));
                 File.WriteAllText(projPath, proj.WriteToString());
             }
             //#endif
