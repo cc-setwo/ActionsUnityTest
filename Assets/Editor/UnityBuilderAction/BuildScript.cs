@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
-#if !UNITY_ANDROID
+//#if !UNITY_ANDROID
 using UnityEditor.iOS.Xcode;
-#endif
+//#endif
 using UnityEngine;
 
 namespace UnityBuilderAction
@@ -188,6 +188,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Directory.Move(tempDirectoryPath, filePath.Replace("/build/Android/Android.apk", "/build"));
             }
 
+            //#if !UNITY_ANDROID
             if (buildTarget == BuildTarget.iOS)
             {
                 string projPath = filePath + "/Unity-iPhone.xcodeproj/project.pbxproj";
@@ -196,8 +197,10 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 string targetGuid = proj.GetUnityMainTargetGuid();
                 proj.AddBuildProperty(targetGuid, "ENABLE_BITCODE", "false");
                 proj.AddBuildProperty(targetGuid, "OTHER_LDFLAGS", "-Wl,-U,_FlutterUnityPluginOnMessage");
+                proj.AddFileToBuild(proj.TargetGuidByName("UnityFramework"), proj.FindFileGuidByProjectPath("/Data"));
                 File.WriteAllText(projPath, proj.WriteToString());
             }
+            //#endif
 
             ReportSummary(buildSummary);
             ExitWithResult(buildSummary.result);

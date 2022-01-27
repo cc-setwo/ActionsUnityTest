@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd396d80-363f-4199-96af-cff939dda98b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ActionsUnityTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,7 @@
       <updated>1643116579119</updated>
       <workItem from="1643116582850" duration="3985000" />
       <workItem from="1643208180297" duration="5872000" />
-      <workItem from="1643291879510" duration="1339000" />
+      <workItem from="1643291879510" duration="2000000" />
     </task>
     <servers />
   </component>
@@ -157,10 +158,10 @@
           <line>58</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="54">
             <startOffsets>
-              <option value="2527" />
+              <option value="2531" />
             </startOffsets>
             <endOffsets>
-              <option value="2574" />
+              <option value="2578" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -170,10 +171,10 @@
           <line>168</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="154">
             <startOffsets>
-              <option value="6863" />
+              <option value="6867" />
             </startOffsets>
             <endOffsets>
-              <option value="6945" />
+              <option value="6949" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
