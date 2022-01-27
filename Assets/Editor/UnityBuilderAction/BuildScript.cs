@@ -201,9 +201,9 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Debug.Log("UnityFramework: " + proj.GetUnityFrameworkTargetGuid());
                 Debug.Log("Data: " + proj.FindFileGuidByProjectPath("/Data"));
                 //proj.file
-                Debug.Log(source.Substring(source.IndexOf("/* Data in Resources */") - 26, 50));
+                Debug.Log(source.Substring(source.IndexOf("/* Data in Resources */") - 25, 25));
                 //proj.AddFileToBuild();
-                proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), proj.FindFileGuidByProjectPath("/Data"));
+                proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 25));
                 File.WriteAllText(projPath, proj.WriteToString());
             }
             //#endif
