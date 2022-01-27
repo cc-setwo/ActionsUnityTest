@@ -205,22 +205,9 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 //proj.AddFileToBuild();
                 
                 var unityFrameworkTargetGuid = proj.GetUnityFrameworkTargetGuid();
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data"));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Absolute));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Build));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Developer));
-                //Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Group));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Sdk));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Source));
-                
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/"));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Absolute));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Build));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Developer));
-                //Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Group));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Sdk));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Source));
-                proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), "AA31BF961B55660D0013FB1B");
+                var stringToFind = "/* Data in Resources */ = {isa = PBXBuildFile; fileRef = ";
+                var dataFolderGuid = source.Substring(source.IndexOf(stringToFind) + stringToFind.Length, 24);
+                proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), dataFolderGuid);
 
                 //proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
                 File.WriteAllText(projPath, proj.WriteToString());
