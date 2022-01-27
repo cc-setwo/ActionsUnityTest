@@ -209,7 +209,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Absolute));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Build));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Developer));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Group));
+                //Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Group));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Sdk));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data", PBXSourceTree.Source));
                 
@@ -217,7 +217,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Absolute));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Build));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Developer));
-                Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Group));
+                //Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Group));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Sdk));
                 Debug.Log(proj.FindFileGuidByRealPath(filePath + "/Data/", PBXSourceTree.Source));
                 //proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
