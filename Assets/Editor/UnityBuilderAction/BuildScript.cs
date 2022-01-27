@@ -207,7 +207,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 var unityFrameworkTargetGuid = proj.GetUnityFrameworkTargetGuid();
                 var stringToFind = "/* Data in Resources */ = {isa = PBXBuildFile; fileRef = ";
                 var dataFolderGuid = source.Substring(source.IndexOf(stringToFind) + stringToFind.Length, 24);
-                proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), dataFolderGuid);
+                //proj.AddFileToBuildSection(unityFrameworkTargetGuid, proj.GetResourcesBuildPhaseByTarget(unityFrameworkTargetGuid), dataFolderGuid);
 
                 //proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
                 File.WriteAllText(projPath, proj.WriteToString());
