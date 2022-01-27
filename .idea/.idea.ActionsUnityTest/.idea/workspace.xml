@@ -15,6 +15,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/569BD4A7-9B74-44DA-ADFA-42615128D16D/5f/72aef845/PBXProjectData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/569BD4A7-9B74-44DA-ADFA-42615128D16D/d3/55f61765/PBXProjectSection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/569BD4A7-9B74-44DA-ADFA-42615128D16D/87/fe274bcf/PBXProjectObjectData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/569BD4A7-9B74-44DA-ADFA-42615128D16D/35/55e42bf7/PBXProject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/569BD4A7-9B74-44DA-ADFA-42615128D16D/07/40ac32cd/KnownSectionBase`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -69,7 +71,7 @@
       <updated>1643116579119</updated>
       <workItem from="1643116582850" duration="3985000" />
       <workItem from="1643208180297" duration="5872000" />
-      <workItem from="1643291879510" duration="4570000" />
+      <workItem from="1643291879510" duration="5643000" />
     </task>
     <servers />
   </component>
