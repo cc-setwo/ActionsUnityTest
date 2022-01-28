@@ -191,6 +191,22 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             //#if !UNITY_ANDROID
             if (buildTarget == BuildTarget.iOS)
             {
+                var tempDirectoryPath = filePath.Replace("/build/ios/ios", "/temp");
+                Debug.Log("Orig Path: " + filePath + " || temp Path: " + tempDirectoryPath);
+                
+                
+                Directory.Move(filePath, tempDirectoryPath);
+
+                if (Directory.Exists(filePath.Replace("/build/ios/ios", "/build")))
+                {
+                    Debug.Log("Deleting build folder: " + filePath.Replace("/build/ios/ios", "/build"));
+                    Directory.Delete(filePath.Replace("/build/ios/ios", "/build"), true);
+                    //DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
+                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/ios/ios", "/build")));
+                }
+                
+                
+                
                 string projPath = filePath + "/Unity-iPhone.xcodeproj/project.pbxproj";
                 PBXProject proj = new PBXProject();
                 string source = File.ReadAllText(projPath);
