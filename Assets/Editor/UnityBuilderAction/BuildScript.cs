@@ -191,22 +191,6 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             //#if !UNITY_ANDROID
             if (buildTarget == BuildTarget.iOS)
             {
-                var tempDirectoryPath = filePath.Replace("/build/iOS/iOS", "/temp");
-                Debug.Log("Orig Path: " + filePath + " || temp Path: " + tempDirectoryPath);
-                
-                
-                Directory.Move(filePath, tempDirectoryPath);
-
-                if (Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")))
-                {
-                    Debug.Log("Deleting build folder: " + filePath.Replace("/build/iOS/iOS", "/build"));
-                    Directory.Delete(filePath.Replace("/build/iOS/iOS", "/build"), true);
-                    //DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
-                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")));
-                }
-                
-                
-                
                 string projPath = filePath + "/Unity-iPhone.xcodeproj/project.pbxproj";
                 PBXProject proj = new PBXProject();
                 string source = File.ReadAllText(projPath);
@@ -227,6 +211,23 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
 
                 //proj.AddFileToBuild(proj.GetUnityFrameworkTargetGuid(), source.Substring(source.IndexOf("/* Data in Resources */") - 25, 24));
                 File.WriteAllText(projPath, proj.WriteToString());
+                
+                
+                
+                
+                var tempDirectoryPath = filePath.Replace("/build/iOS/iOS", "/temp");
+                Debug.Log("Orig Path: " + filePath + " || temp Path: " + tempDirectoryPath);
+                
+                
+                Directory.Move(filePath, tempDirectoryPath);
+
+                if (Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")))
+                {
+                    Debug.Log("Deleting build folder: " + filePath.Replace("/build/iOS/iOS", "/build"));
+                    Directory.Delete(filePath.Replace("/build/iOS/iOS", "/build"), true);
+                    //DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
+                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")));
+                }
             }
             //#endif
 
