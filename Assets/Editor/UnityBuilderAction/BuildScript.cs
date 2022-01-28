@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
-//#if !UNITY_ANDROID
+#if !UNITY_ANDROID
 using UnityEditor.iOS.Xcode;
-//#endif
+#endif
 using UnityEngine;
 
 namespace UnityBuilderAction
@@ -188,7 +188,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Directory.Move(tempDirectoryPath, filePath.Replace("/build/Android/Android.apk", "/build"));
             }
 
-            //#if !UNITY_ANDROID
+            #if !UNITY_ANDROID
             if (buildTarget == BuildTarget.iOS)
             {
                 string projPath = filePath + "/Unity-iPhone.xcodeproj/project.pbxproj";
@@ -232,7 +232,7 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
                 Debug.Log("From: " + tempDirectoryPath + " || to: " + filePath.Replace("/build/iOS/iOS", "/build"));
                 Directory.Move(tempDirectoryPath, filePath.Replace("/build/iOS/iOS", "/build"));
             }
-            //#endif
+            #endif
 
             ReportSummary(buildSummary);
             ExitWithResult(buildSummary.result);

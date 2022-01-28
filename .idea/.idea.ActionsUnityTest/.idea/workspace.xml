@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd396d80-363f-4199-96af-cff939dda98b" name="Default Changelist" comment="" />
+    <list default="true" id="cd396d80-363f-4199-96af-cff939dda98b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/UnityBuilderAction/BuildScript.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +71,7 @@
       <workItem from="1643116582850" duration="3985000" />
       <workItem from="1643208180297" duration="5872000" />
       <workItem from="1643291879510" duration="9952000" />
-      <workItem from="1643359065179" duration="2582000" />
+      <workItem from="1643359065179" duration="2697000" />
     </task>
     <servers />
   </component>
@@ -163,10 +165,10 @@
           <line>58</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="54">
             <startOffsets>
-              <option value="2531" />
+              <option value="2527" />
             </startOffsets>
             <endOffsets>
-              <option value="2578" />
+              <option value="2574" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -176,10 +178,10 @@
           <line>168</line>
           <properties documentPath="C:\Users\CC\Documents\ActionsUnityTest\Assets\Editor\UnityBuilderAction\BuildScript.cs" initialLine="154">
             <startOffsets>
-              <option value="6867" />
+              <option value="6863" />
             </startOffsets>
             <endOffsets>
-              <option value="6949" />
+              <option value="6945" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
