@@ -191,18 +191,18 @@ options = buildTarget == BuildTarget.Android ? BuildOptions.AcceptExternalModifi
             //#if !UNITY_ANDROID
             if (buildTarget == BuildTarget.iOS)
             {
-                var tempDirectoryPath = filePath.Replace("/build/ios/ios", "/temp");
+                var tempDirectoryPath = filePath.Replace("/build/iOS/iOS", "/temp");
                 Debug.Log("Orig Path: " + filePath + " || temp Path: " + tempDirectoryPath);
                 
                 
                 Directory.Move(filePath, tempDirectoryPath);
 
-                if (Directory.Exists(filePath.Replace("/build/ios/ios", "/build")))
+                if (Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")))
                 {
-                    Debug.Log("Deleting build folder: " + filePath.Replace("/build/ios/ios", "/build"));
-                    Directory.Delete(filePath.Replace("/build/ios/ios", "/build"), true);
+                    Debug.Log("Deleting build folder: " + filePath.Replace("/build/iOS/iOS", "/build"));
+                    Directory.Delete(filePath.Replace("/build/iOS/iOS", "/build"), true);
                     //DeleteDirectory(filePath.Replace("/build/Android/Android.apk", "/build"));
-                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/ios/ios", "/build")));
+                    Debug.Log("Does build folder exist? : " + Directory.Exists(filePath.Replace("/build/iOS/iOS", "/build")));
                 }
                 
                 
