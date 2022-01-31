@@ -16,23 +16,6 @@ jobs:
         targetPlatform:
           - Android
           
-    buildForWindowsBasedPlatforms:
-    name: Build for ${{ matrix.targetPlatform }}
-    runs-on: windows-2019
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - test-project
-        unityVersion:
-          - 2019.4.1f1
-          - 2020.2.1f1
-        targetPlatform:
-          - StandaloneWindows # Build a Windows 32-bit standalone.
-          - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          - tvOS # Build an AppleTV player.
-          - WSAPlayer # Build a UWP App.
-
     steps:
       - uses: actions/checkout@v2
         with:
