@@ -6,6 +6,16 @@ jobs:
   build:
     name: Build my project ✨
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        projectPath:
+          - test-project
+        unityVersion:
+          - 2020.3.14f1
+        targetPlatform:
+          - Android
+          
     steps:
       # Checkout (without LFS)
       - name: Checkout repository
